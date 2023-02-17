@@ -24,12 +24,12 @@ export const App = () => {
           <Text />
         </div>
         <span>
-          <FaAnchor size={220} />
+          <FaAnchor />
         </span>
       </S.Section1>
       <S.Section2>
         <span>
-          <FaCoffee size={220} />
+          <FaCoffee />
         </span>
         <div>
           <Title />

@@ -39,4 +39,10 @@ export const Container = styled.div`
       color: #000000;
     }
   }
+
+  @media (max-width: 410px) {
+    h1 {
+      text-align: center;
+    }
+  }
 `;

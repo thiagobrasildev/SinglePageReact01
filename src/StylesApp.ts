@@ -46,6 +46,32 @@ export const Section1 = styled.div`
 
     svg {
       color: #f44336;
+      font-size: 230px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+
+    div {
+      max-width: 90%;
+    }
+
+    span {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 320px) {
+    span {
+      svg {
+        font-size: 150px;
+      }
     }
   }
 `;
@@ -67,6 +93,33 @@ export const Section2 = styled.div`
 
     svg {
       color: #f44336;
+      font-size: 230px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+
+    div {
+      max-width: 90%;
+    }
+
+    span {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 320px) {
+    span {
+      padding: 0px;
+      svg {
+        font-size: 150px;
+      }
     }
   }
 `;
