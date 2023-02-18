@@ -75,10 +75,12 @@ export const Mobile = styled.div`
     ul {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      height: 220px;
       position: absolute;
       top: 49px;
       width: 100%;
+      background-color: #f44336;
+      overflow: hidden;
 
       li {
         font-size: 18px;

@@ -50,7 +50,7 @@ export const Section1 = styled.div`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 740px) {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -82,6 +82,7 @@ export const Section2 = styled.div`
   background-color: #eeeeee;
   padding-top: 64px;
   padding-bottom: 64px;
+  gap: 30px;
 
   div {
     max-width: 50%;
@@ -89,7 +90,7 @@ export const Section2 = styled.div`
 
   span {
     max-width: 30%;
-    padding: 80px;
+    /* padding: 80px; */
 
     svg {
       color: #f44336;
@@ -97,7 +98,7 @@ export const Section2 = styled.div`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 740px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
