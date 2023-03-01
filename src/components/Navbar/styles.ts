@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div`${(props: {
+  open?: boolean;
+}) => css`
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
   height: 100%;
 
@@ -42,68 +42,51 @@ export const Container = styled.div`
     }
   }
 
-  .mobile {
+  button {
     display: none;
-  }
-
-  @media (max-width: 620px) {
-    display: none;
-  }
-`;
-
-export const Mobile = styled.div`
-  display: none;
-
-  @media (max-width: 620px) {
-    display: flex;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: center;
+    background-color: transparent;
+    color: #ffffff;
     height: 100%;
-    position: relative;
+    border: none;
+    min-width: 66px;
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
 
+  @media (max-width: 620px) {
+    align-items: flex-start;
+    position: absolute;
+    ul {
+      ${props.open && css`
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+      `}
+      li {
+        line-height: 50px;
+        &:first-child {
+          width: 100px;
+        }
+        &:not(:first-child) {
+          display: ${props.open ? 'block' : 'none'};
+          background-color: #fff;
+          width: calc(100% + 66px);
+          color: #000;
+          &:hover {
+            background-color: #cccccc;
+          }
+        }
+      }
+    }
     button {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      background-color: #fff;
-      border: none;
-      width: 20%;
-    }
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      height: 220px;
       position: absolute;
-      top: 49px;
-      width: 100%;
-      background-color: #f44336;
-      overflow: hidden;
-
-      li {
-        font-size: 18px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        color: #ffffff;
-        cursor: pointer;
-        padding: 10px;
-        text-align: center;
-
-        &:hover {
-          background-color: #ffffff;
-          color: #000000;
-        }
-      }
-      .selected {
-        color: #000000;
-        background-color: white;
-
-        &:hover {
-          background-color: #cccccc;
-        }
-      }
+      right: 0px;
     }
   }
-`;
+`}`
+

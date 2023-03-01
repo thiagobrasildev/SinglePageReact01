@@ -17,7 +17,6 @@ export const ContainerNavbar = styled.div`
   height: 50px;
   background-color: #f44336;
   box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
   position: fixed;
 `;
 export const ContainerHero = styled.div`

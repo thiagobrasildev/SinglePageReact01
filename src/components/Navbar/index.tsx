@@ -1,12 +1,12 @@
-import * as S from "./styles";
+import { BsList } from "react-icons/bs";
 import { useState } from "react";
-import { BsList, BsXLg } from "react-icons/bs";
+import * as S from "./styles";
 
 export const Navbar = () => {
-  const [open, setOpen] = useState<Boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
   return (
     <>
-      <S.Container>
+      <S.Container open={open}>
         <ul>
           <li className="selected">Home</li>
           <li>Link 1</li>
@@ -14,21 +14,10 @@ export const Navbar = () => {
           <li>Link 3</li>
           <li>Link 4</li>
         </ul>
-      </S.Container>
-      <S.Mobile>
         <button onClick={() => setOpen(!open)}>
-          {open ? <BsXLg size={30} /> : <BsList size={40} />}
+          <BsList size={30} />
         </button>
-        {open ? (
-          <ul>
-            <li className="selected">Home</li>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-            <li>Link 4</li>
-          </ul>
-        ) : null}
-      </S.Mobile>
+      </S.Container>
     </>
   );
 };
